@@ -30,7 +30,7 @@ namespace Karhering
 
         private void label3_Click(object sender, EventArgs e)
         {
-            // Обработчик события для label3, здесь можно оставить ваш существующий код
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -64,6 +64,7 @@ namespace Karhering
 
             return new string(randomChars);
         }
+     
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -74,6 +75,25 @@ namespace Karhering
         {
             rab7 log = new rab7();
             log.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+            rab6 log = new rab6();
+            log.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Hub log = new Hub();
+            this.Hide();
+            log.Show();
+        }
+
+        private void Bonus_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

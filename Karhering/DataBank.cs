@@ -9,7 +9,7 @@ namespace Karhering
     static class DataBank
     {
         public static string Text;
-        public static string Text2;
+        public static string Text2 = "AdminPanel";
         public static string Text3;
     }
 }

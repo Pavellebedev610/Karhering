@@ -32,10 +32,18 @@ namespace Karhering
             var password = guna2TextBox2.Text;
             var number_prav = guna2TextBox4.Text;
             var telefon = guna2TextBox5.Text;
+            var role = 2;
 
-            string querystring = $"insert into client(FIO, mail, password, number_prav, telefon) values ('{fio}','{mail}','{password}','{number_prav}','{telefon}')";
+            string querystring = $"insert into client(FIO, mail, password, number_prav, telefon,role) values (@fio,@mail,@password,@number_prav,@telefon,@role)";
 
             SqlCommand command = new SqlCommand(querystring, dataBases.getConnection());
+
+            command.Parameters.AddWithValue("fio", fio);
+            command.Parameters.AddWithValue("mail", mail);
+            command.Parameters.AddWithValue("password", password);
+            command.Parameters.AddWithValue("number_prav", number_prav);
+            command.Parameters.AddWithValue("telefon", telefon);
+            command.Parameters.AddWithValue("role", role);
 
             dataBases.openConnection();
 
@@ -62,6 +70,18 @@ namespace Karhering
         private void guna2TextBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login frmlgn = new Login();
+            this.Hide();
+            frmlgn.ShowDialog();
         }
     }
 }

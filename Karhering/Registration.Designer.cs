@@ -52,7 +52,6 @@
             label4 = new Label();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            label2 = new Label();
             label5 = new Label();
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             label6 = new Label();
@@ -62,6 +61,7 @@
             guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             label8 = new Label();
             guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -120,7 +120,7 @@
             button.FillColor = Color.FromArgb(128, 255, 255);
             button.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button.ForeColor = Color.Transparent;
-            button.Location = new Point(922, 371);
+            button.Location = new Point(920, 362);
             button.Name = "button";
             button.ShadowDecoration.CustomizableEdges = customizableEdges2;
             button.Size = new Size(138, 38);
@@ -132,7 +132,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(889, 305);
+            label3.Location = new Point(885, 287);
             label3.Name = "label3";
             label3.Size = new Size(63, 19);
             label3.TabIndex = 22;
@@ -142,7 +142,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(889, 34);
+            label4.Location = new Point(885, 16);
             label4.Name = "label4";
             label4.Size = new Size(44, 19);
             label4.TabIndex = 21;
@@ -159,7 +159,7 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Segoe UI", 9F);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(889, 327);
+            guna2TextBox2.Location = new Point(885, 309);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '●';
             guna2TextBox2.PlaceholderText = "";
@@ -180,7 +180,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(889, 56);
+            guna2TextBox1.Location = new Point(885, 38);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "";
@@ -189,22 +189,11 @@
             guna2TextBox1.Size = new Size(200, 29);
             guna2TextBox1.TabIndex = 19;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Tahoma", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label2.Location = new Point(939, 1);
-            label2.Name = "label2";
-            label2.Size = new Size(90, 35);
-            label2.TabIndex = 18;
-            label2.Text = "Вход";
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label5.Location = new Point(889, 99);
+            label5.Location = new Point(885, 81);
             label5.Name = "label5";
             label5.Size = new Size(54, 19);
             label5.TabIndex = 24;
@@ -221,7 +210,7 @@
             guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox3.Font = new Font("Segoe UI", 9F);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(889, 121);
+            guna2TextBox3.Location = new Point(885, 103);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PasswordChar = '\0';
             guna2TextBox3.PlaceholderText = "";
@@ -234,7 +223,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label6.Location = new Point(889, 173);
+            label6.Location = new Point(885, 155);
             label6.Name = "label6";
             label6.Size = new Size(95, 19);
             label6.TabIndex = 26;
@@ -251,7 +240,7 @@
             guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox4.Font = new Font("Segoe UI", 9F);
             guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(889, 195);
+            guna2TextBox4.Location = new Point(885, 177);
             guna2TextBox4.Name = "guna2TextBox4";
             guna2TextBox4.PasswordChar = '\0';
             guna2TextBox4.PlaceholderText = "";
@@ -264,7 +253,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label7.Location = new Point(200, 208);
+            label7.Location = new Point(156, 152);
             label7.Name = "label7";
             label7.RightToLeft = RightToLeft.Yes;
             label7.Size = new Size(611, 94);
@@ -302,7 +291,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label8.Location = new Point(889, 241);
+            label8.Location = new Point(885, 223);
             label8.Name = "label8";
             label8.Size = new Size(74, 19);
             label8.TabIndex = 30;
@@ -319,7 +308,7 @@
             guna2TextBox5.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox5.Font = new Font("Segoe UI", 9F);
             guna2TextBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox5.Location = new Point(889, 263);
+            guna2TextBox5.Location = new Point(885, 245);
             guna2TextBox5.Name = "guna2TextBox5";
             guna2TextBox5.PasswordChar = '\0';
             guna2TextBox5.PlaceholderText = "";
@@ -329,12 +318,27 @@
             guna2TextBox5.TabIndex = 29;
             guna2TextBox5.TextChanged += guna2TextBox5_TextChanged;
             // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            linkLabel1.LinkColor = Color.Black;
+            linkLabel1.Location = new Point(1012, 345);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(130, 14);
+            linkLabel1.TabIndex = 31;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Уже имеется аккаунт";
+            linkLabel1.VisitedLinkColor = Color.FromArgb(128, 255, 255);
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // Registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1184, 661);
+            Controls.Add(linkLabel1);
             Controls.Add(label8);
             Controls.Add(guna2TextBox5);
             Controls.Add(guna2Button7);
@@ -347,7 +351,6 @@
             Controls.Add(label4);
             Controls.Add(guna2TextBox2);
             Controls.Add(guna2TextBox1);
-            Controls.Add(label2);
             Controls.Add(button);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
@@ -356,6 +359,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Registration";
             Text = "Registration";
+            Load += Registration_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -373,7 +377,6 @@
         private Label label4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Label label2;
         private Label label5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Label label6;
@@ -383,5 +386,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Label label8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private LinkLabel linkLabel1;
     }
 }

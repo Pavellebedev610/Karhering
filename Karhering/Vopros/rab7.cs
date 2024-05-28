@@ -30,7 +30,7 @@ namespace Karhering.Vopros
         private void button_Click(object sender, EventArgs e)
         {
             guna2TextBox1.Clear();
-            MessageBox.Show("Промокод активирован");
+            MessageBox.Show("Промокод на проверке");
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

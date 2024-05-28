@@ -25,7 +25,7 @@ namespace Karhering
         }
         private void LoadData()
         {
-            string connectString = (@"Data Source = DESKTOP-8BRSR7L; Initial Catalog=Karshering;Integrated Security=True");
+            string connectString = (@"Data Source = DESKTOP-8BRSR7L; Initial Catalog=karshering;Integrated Security=True");
             SqlConnection myConnection = new SqlConnection(connectString);
             myConnection.Open();
             string query = "SELECT * FROM car ORDER BY id_car";
@@ -37,7 +37,7 @@ namespace Karhering
 
             while (reader.Read())
             {
-                data.Add(new string[8]);
+                data.Add(new string[7]);
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
                 data[data.Count - 1][2] = reader[2].ToString();
@@ -45,7 +45,6 @@ namespace Karhering
                 data[data.Count - 1][4] = reader[4].ToString();
                 data[data.Count - 1][5] = reader[5].ToString();
                 data[data.Count - 1][6] = reader[6].ToString();
-                data[data.Count - 1][7] = reader[7].ToString();
 
             }
             reader.Close();

@@ -98,6 +98,7 @@
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new Size(50, 45);
             guna2Button1.TabIndex = 1;
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
             // 
@@ -122,7 +123,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label3.Location = new Point(1028, 143);
+            label3.Location = new Point(1021, 143);
             label3.Name = "label3";
             label3.Size = new Size(54, 21);
             label3.TabIndex = 12;
@@ -138,6 +139,7 @@
             label2.Size = new Size(160, 21);
             label2.TabIndex = 11;
             label2.Text = "Доступных бонусов";
+            label2.Click += label2_Click;
             // 
             // guna2Button3
             // 
@@ -168,18 +170,19 @@
             guna2Button4.Font = new Font("Segoe UI", 9F);
             guna2Button4.ForeColor = Color.White;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
-            guna2Button4.Location = new Point(1085, 137);
+            guna2Button4.Location = new Point(1071, 131);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button4.Size = new Size(36, 36);
+            guna2Button4.Size = new Size(43, 45);
             guna2Button4.TabIndex = 14;
             // 
             // label10
             // 
             label10.AutoSize = true;
+            label10.Enabled = false;
             label10.Font = new Font("Segoe UI Black", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Cyan;
-            label10.Location = new Point(555, 296);
+            label10.Location = new Point(541, 298);
             label10.Name = "label10";
             label10.Size = new Size(100, 40);
             label10.TabIndex = 15;
@@ -236,6 +239,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Bonus";
             Text = "Bonus";
+            Load += Bonus_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

@@ -7,29 +7,31 @@ using System.Threading.Tasks;
 
 namespace Karhering
 {
-    internal class Baza : Form
+    internal class Baza
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source = DESKTOP-8BRSR7L; Initial Catalog=Karshering;Integrated Security=True");
+        
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source = DESKTOP-8BRSR7L; Initial Catalog=Karshering;Integrated Security=True");
 
-        public void openConnection()
-        {
-            if (sqlConnection.State == System.Data.ConnectionState.Closed)
+            public void openConnection()
             {
-                sqlConnection.Open();
+                if (sqlConnection.State == System.Data.ConnectionState.Closed)
+                {
+                    sqlConnection.Open();
+                }
             }
-        }
 
-        public void closeConnection()
-        {
-            if (sqlConnection.State == System.Data.ConnectionState.Open)
+            public void closeConnection()
             {
-                sqlConnection.Close();
+                if (sqlConnection.State == System.Data.ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
             }
-        }
 
-        public SqlConnection getConnection()
-        {
-            return sqlConnection;
-        }
+            public SqlConnection getConnection()
+            {
+                return sqlConnection;
+            }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.Logging;
+﻿using Guna.UI2.WinForms;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,13 +34,17 @@ namespace Karhering
             Baza dataBases = new Baza();
 
             var mail = guna2TextBox1.Text;
-            var password = guna2TextBox2.Text;
+            var password = guna2TextBox3.Text;
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string querystring = $"select id_polz, FIO, number_prav from client where mail = '{mail}' and password ='{password}'";
+            string querystring = $"select id_polz, FIO, number_prav,role from client where mail = @mail and password =@password";
+
 
             SqlCommand command = new SqlCommand(querystring, dataBases.getConnection());
+
+            command.Parameters.AddWithValue("mail", mail);
+            command.Parameters.AddWithValue("password", password);
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -48,19 +54,35 @@ namespace Karhering
 
             if (table.Rows.Count == 1)
             {
-                DataBank.Text = guna2TextBox3.Text;
-                DataBank.Text3 = guna2TextBox1.Text;
-                MessageBox.Show("Вы вошли!");
-                Hub log1 = new Hub();
-                this.Hide();
-                log1.Show();
-
+                int role = Convert.ToInt32(table.Rows[0]["role"]);
+                switch (role)
+                {
+                    case 1:
+                        DataBank.Text2 = "AdminPanel";
+                        MessageBox.Show("Вы вошли в админ-панель");
+                        Hub frmlgn = new Hub();
+                        frmlgn.ClientInfo = new Repository.Client { id_polz = table.Rows[0]["id_polz"] };
+                        this.Hide();
+                        frmlgn.ShowDialog();
+                        break;
+                    case 2:
+                        DataBank.Text2 = guna2TextBox1.Text;
+                        MessageBox.Show("Вы вошли");
+                        Hub frmlgn2 = new Hub();
+                        frmlgn2.ClientInfo = new Repository.Client { id_polz = table.Rows[0]["id_polz"] };
+                        this.Hide();
+                        frmlgn2.ShowDialog();
+                        break;
+                    default:
+                        MessageBox.Show("Такой роли не существует");
+                        break;
+                }
             }
             else
-                MessageBox.Show("Такого пользователя нет!");
-
+            {
+                MessageBox.Show("Такого пользователя не существует");
+            }
         }
-
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -86,6 +108,11 @@ namespace Karhering
         private void guna2Button7_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

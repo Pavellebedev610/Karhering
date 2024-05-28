@@ -143,9 +143,59 @@ namespace Karhering.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_align_justify_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-align-justify-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap keyboard_left_arrow_button_icon_icons_com_72692 {
             get {
                 object obj = ResourceManager.GetObject("keyboard-left-arrow-button_icon-icons.com_72692", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap location_gas_station_icon_124927 {
+            get {
+                object obj = ResourceManager.GetObject("location_gas_station_icon_124927", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scale_1200 {
+            get {
+                object obj = ResourceManager.GetObject("scale_1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2024_01_09_183455 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2024-01-09 183455", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2024_05_23_220336 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2024-05-23 220336", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

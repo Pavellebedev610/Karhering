@@ -40,6 +40,9 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             id_car = new DataGridViewTextBoxColumn();
             marka_auto = new DataGridViewTextBoxColumn();
             model_auto = new DataGridViewTextBoxColumn();
@@ -47,10 +50,6 @@
             god_vipuska = new DataGridViewTextBoxColumn();
             probeg = new DataGridViewTextBoxColumn();
             toplivo = new DataGridViewTextBoxColumn();
-            svobodna = new DataGridViewTextBoxColumn();
-            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             SuspendLayout();
@@ -107,7 +106,7 @@
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 17;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { id_car, marka_auto, model_auto, number, god_vipuska, probeg, toplivo, svobodna });
+            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { id_car, marka_auto, model_auto, number, god_vipuska, probeg, toplivo });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -145,6 +144,37 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             guna2DataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
             // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2BorderlessForm2
+            // 
+            guna2BorderlessForm2.ContainerControl = this;
+            guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm2.TransparentWhileDrag = true;
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.BackColor = Color.Gray;
+            guna2Button2.CustomizableEdges = customizableEdges3;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.White;
+            guna2Button2.Font = new Font("Segoe UI", 9F);
+            guna2Button2.ForeColor = Color.Gray;
+            guna2Button2.Image = Properties.Resources.cancel_cross_icon_icons_com_71726;
+            guna2Button2.Location = new Point(1139, 0);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button2.Size = new Size(28, 25);
+            guna2Button2.TabIndex = 0;
+            guna2Button2.Click += guna2Button2_Click;
+            // 
             // id_car
             // 
             id_car.HeaderText = "id_car";
@@ -180,42 +210,6 @@
             toplivo.HeaderText = "toplivo";
             toplivo.Name = "toplivo";
             // 
-            // svobodna
-            // 
-            svobodna.HeaderText = "svobodna";
-            svobodna.Name = "svobodna";
-            // 
-            // guna2BorderlessForm1
-            // 
-            guna2BorderlessForm1.ContainerControl = this;
-            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // guna2BorderlessForm2
-            // 
-            guna2BorderlessForm2.ContainerControl = this;
-            guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm2.TransparentWhileDrag = true;
-            // 
-            // guna2Button2
-            // 
-            guna2Button2.BackColor = Color.Gray;
-            guna2Button2.CustomizableEdges = customizableEdges3;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.White;
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.Gray;
-            guna2Button2.Image = Properties.Resources.cancel_cross_icon_icons_com_71726;
-            guna2Button2.Location = new Point(1139, 0);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(28, 25);
-            guna2Button2.TabIndex = 0;
-            guna2Button2.Click += guna2Button2_Click;
-            // 
             // Auto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -239,6 +233,9 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private DataGridViewTextBoxColumn id_car;
         private DataGridViewTextBoxColumn marka_auto;
         private DataGridViewTextBoxColumn model_auto;
@@ -246,9 +243,5 @@
         private DataGridViewTextBoxColumn god_vipuska;
         private DataGridViewTextBoxColumn probeg;
         private DataGridViewTextBoxColumn toplivo;
-        private DataGridViewTextBoxColumn svobodna;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
