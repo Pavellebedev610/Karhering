@@ -144,6 +144,9 @@ namespace Karhering
             GAS2.Text = car.CarInfo.toplivo;
             label32.Text = car.CarInfo.number;
             CarImage.Image = car.image;
+            CarImage2.Image = car.image;
+            CarImage3.Image = car.image;
+            CarImage4.Image = car.image;
             CarName.Text = car.CarInfo.marka_auto;
             label33.Text = car.CarInfo.model_auto;
             label27.Text = car.CarInfo.model_auto;
@@ -152,6 +155,9 @@ namespace Karhering
             curentCar = car.CarInfo;
             string photoPath = Encoding.UTF8.GetString(car.CarInfo.PhotoCar);
             LoadCarPhoto(photoPath, CarImage);
+            LoadCarPhoto(photoPath, CarImage2);
+            LoadCarPhoto(photoPath, CarImage3);
+            LoadCarPhoto(photoPath, CarImage4);
         }
         private void LoadCarPhoto(string photoPath, PictureBox pictureBox)
         {
@@ -162,6 +168,9 @@ namespace Karhering
                 using (MemoryStream ms = new MemoryStream(curentCar.PhotoCar))
                 {
                     CarImage.Image = Image.FromStream(ms);
+                    CarImage2.Image = Image.FromStream(ms);
+                    CarImage3.Image = Image.FromStream(ms);
+                    CarImage4.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)

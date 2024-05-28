@@ -114,7 +114,7 @@
             panel7 = new Panel();
             label31 = new Label();
             label32 = new Label();
-            pictureBox7 = new PictureBox();
+            CarImage4 = new PictureBox();
             label35 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -206,7 +206,7 @@
             panel2.SuspendLayout();
             FinalPrice.SuspendLayout();
             panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CarImage4).BeginInit();
             CarInfo.SuspendLayout();
             panel9.SuspendLayout();
             panel10.SuspendLayout();
@@ -445,11 +445,11 @@
             FinalPrice.Controls.Add(label28);
             FinalPrice.Controls.Add(label29);
             FinalPrice.Controls.Add(panel7);
-            FinalPrice.Controls.Add(pictureBox7);
+            FinalPrice.Controls.Add(CarImage4);
             FinalPrice.Controls.Add(label35);
             FinalPrice.CustomizableEdges = customizableEdges17;
             FinalPrice.FillColor = Color.FromArgb(0, 192, 192);
-            FinalPrice.Location = new Point(428, 52);
+            FinalPrice.Location = new Point(431, 52);
             FinalPrice.Name = "FinalPrice";
             FinalPrice.ShadowDecoration.CustomizableEdges = customizableEdges18;
             FinalPrice.Size = new Size(459, 267);
@@ -580,16 +580,16 @@
             label32.TabIndex = 12;
             label32.Text = "Гос номер";
             // 
-            // pictureBox7
+            // CarImage4
             // 
-            pictureBox7.BackColor = Color.White;
-            pictureBox7.Location = new Point(254, 91);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(185, 95);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 12;
-            pictureBox7.TabStop = false;
-            pictureBox7.Click += pictureBox7_Click;
+            CarImage4.BackColor = Color.White;
+            CarImage4.Location = new Point(254, 91);
+            CarImage4.Name = "CarImage4";
+            CarImage4.Size = new Size(185, 95);
+            CarImage4.SizeMode = PictureBoxSizeMode.Zoom;
+            CarImage4.TabIndex = 12;
+            CarImage4.TabStop = false;
+            CarImage4.Click += pictureBox7_Click;
             // 
             // label35
             // 
@@ -1060,7 +1060,7 @@
             ArendaBron.Controls.Add(label13);
             ArendaBron.CustomizableEdges = customizableEdges39;
             ArendaBron.FillColor = Color.FromArgb(0, 192, 192);
-            ArendaBron.Location = new Point(432, 41);
+            ArendaBron.Location = new Point(428, 53);
             ArendaBron.Name = "ArendaBron";
             ArendaBron.ShadowDecoration.CustomizableEdges = customizableEdges40;
             ArendaBron.Size = new Size(452, 353);
@@ -1677,7 +1677,7 @@
             FinalPrice.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CarImage4).EndInit();
             CarInfo.ResumeLayout(false);
             CarInfo.PerformLayout();
             panel9.ResumeLayout(false);
@@ -1806,7 +1806,7 @@
         private Panel panel7;
         private Label label31;
         private Label label32;
-        private PictureBox pictureBox7;
+        private PictureBox CarImage4;
         private Label label35;
         private Label label27;
         private Label label15;
