@@ -28,14 +28,6 @@ namespace Karhering.Repository
             var cars = db.Query<Car>("select * from car").ToList();
             return cars;
         }
-        public List<Client> GetUser()
-        {
-            using var db = _db.getConnection();
-
-            var client = db.Query<Client>("select * from client").ToList();
-            return client;
-        }
-
 
 
 
