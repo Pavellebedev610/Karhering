@@ -50,8 +50,6 @@ namespace Karhering
             adapter.Fill(table);
 
 
-            qwe
-
             if (table.Rows.Count == 1)
             {
                 int role = Convert.ToInt32(table.Rows[0]["role"]);
