@@ -40,9 +40,6 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             id_car = new DataGridViewTextBoxColumn();
             marka_auto = new DataGridViewTextBoxColumn();
             model_auto = new DataGridViewTextBoxColumn();
@@ -50,13 +47,16 @@
             god_vipuska = new DataGridViewTextBoxColumn();
             probeg = new DataGridViewTextBoxColumn();
             toplivo = new DataGridViewTextBoxColumn();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(128, 255, 255);
+            panel1.BackColor = Color.FromArgb(130, 224, 224);
             panel1.Controls.Add(guna2Button1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 22);
@@ -71,7 +71,7 @@
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(128, 255, 255);
+            guna2Button1.FillColor = Color.Transparent;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Image = Properties.Resources.keyboard_left_arrow_button_icon_icons_com_72692;
@@ -144,37 +144,6 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             guna2DataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
             // 
-            // guna2BorderlessForm1
-            // 
-            guna2BorderlessForm1.ContainerControl = this;
-            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // guna2BorderlessForm2
-            // 
-            guna2BorderlessForm2.ContainerControl = this;
-            guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm2.TransparentWhileDrag = true;
-            // 
-            // guna2Button2
-            // 
-            guna2Button2.BackColor = Color.Gray;
-            guna2Button2.CustomizableEdges = customizableEdges3;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.White;
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.Gray;
-            guna2Button2.Image = Properties.Resources.cancel_cross_icon_icons_com_71726;
-            guna2Button2.Location = new Point(1139, 0);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(28, 25);
-            guna2Button2.TabIndex = 0;
-            guna2Button2.Click += guna2Button2_Click;
-            // 
             // id_car
             // 
             id_car.HeaderText = "id_car";
@@ -209,6 +178,37 @@
             // 
             toplivo.HeaderText = "toplivo";
             toplivo.Name = "toplivo";
+            // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2BorderlessForm2
+            // 
+            guna2BorderlessForm2.ContainerControl = this;
+            guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm2.TransparentWhileDrag = true;
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.BackColor = Color.Gray;
+            guna2Button2.CustomizableEdges = customizableEdges3;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.White;
+            guna2Button2.Font = new Font("Segoe UI", 9F);
+            guna2Button2.ForeColor = Color.Gray;
+            guna2Button2.Image = Properties.Resources.cancel_cross_icon_icons_com_71726;
+            guna2Button2.Location = new Point(1139, 0);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button2.Size = new Size(28, 25);
+            guna2Button2.TabIndex = 0;
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // Auto
             // 

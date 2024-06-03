@@ -63,7 +63,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(128, 255, 255);
+            panel1.BackColor = Color.FromArgb(130, 224, 224);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(guna2Button1);
             panel1.Location = new Point(0, 23);
@@ -89,7 +89,7 @@
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(128, 255, 255);
+            guna2Button1.FillColor = Color.Transparent;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Image = Properties.Resources.keyboard_left_arrow_button_icon_icons_com_72692;
@@ -164,7 +164,7 @@
             label10.AutoSize = true;
             label10.Enabled = false;
             label10.Font = new Font("Segoe UI Black", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Cyan;
+            label10.ForeColor = Color.FromArgb(130, 224, 224);
             label10.Location = new Point(541, 298);
             label10.Name = "label10";
             label10.Size = new Size(100, 40);
@@ -193,7 +193,7 @@
             button.DisabledState.CustomBorderColor = Color.DarkGray;
             button.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             button.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            button.FillColor = Color.FromArgb(128, 255, 255);
+            button.FillColor = Color.FromArgb(130, 224, 224);
             button.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button.ForeColor = Color.Transparent;
             button.Location = new Point(463, 358);

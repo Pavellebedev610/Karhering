@@ -85,6 +85,7 @@
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2CustomGradientPanel1.Size = new Size(478, 65);
             guna2CustomGradientPanel1.TabIndex = 5;
+            guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
             // 
             // HistoryCar
             // 
