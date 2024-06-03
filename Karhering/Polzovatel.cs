@@ -13,7 +13,9 @@ namespace Karhering
 {
     public partial class Polzovatel : Form
     {
+
         public Client ClientInfo { get; set; }
+        public int UserId { get; set; }
 
         public Polzovatel()
         {
@@ -24,6 +26,14 @@ namespace Karhering
         {
             label2.Text = ClientInfo.rating;
 
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            Hub hubForm = new Hub();
+            hubForm.UserId = UserId;
+            this.Hide();
+            hubForm.Show();
         }
     }
 }

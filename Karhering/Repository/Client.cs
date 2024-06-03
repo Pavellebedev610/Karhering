@@ -12,5 +12,7 @@
         public string telefon { get; set; }
 
         public string rating { get; set; }
+
+        public string bonus { get; set; }
     }
 }

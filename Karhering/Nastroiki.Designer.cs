@@ -33,12 +33,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panel1 = new Panel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +44,6 @@
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             label4 = new Label();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
             label3 = new Label();
             guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -140,23 +137,6 @@
             label4.TabIndex = 6;
             label4.Text = "e-mail";
             // 
-            // guna2Button3
-            // 
-            guna2Button3.CustomizableEdges = customizableEdges7;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.White;
-            guna2Button3.Font = new Font("Segoe UI", 9F);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(42, 203);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button3.Size = new Size(1063, 45);
-            guna2Button3.TabIndex = 7;
-            guna2Button3.Text = "guna2Button3";
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -176,6 +156,7 @@
             label3.Size = new Size(54, 21);
             label3.TabIndex = 10;
             label3.Text = "label3";
+            label3.Click += label3_Click_1;
             // 
             // guna2ToggleSwitch1
             // 
@@ -213,10 +194,11 @@
             label7.Size = new Size(128, 21);
             label7.TabIndex = 13;
             label7.Text = "Удалить аккаунт";
+            label7.Click += label7_Click;
             // 
             // guna2Button4
             // 
-            guna2Button4.CustomizableEdges = customizableEdges9;
+            guna2Button4.CustomizableEdges = customizableEdges7;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
             guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -226,10 +208,9 @@
             guna2Button4.ForeColor = Color.White;
             guna2Button4.Location = new Point(42, 330);
             guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button4.Size = new Size(1063, 45);
             guna2Button4.TabIndex = 14;
-            guna2Button4.Text = "guna2Button4";
             guna2Button4.Click += guna2Button4_Click;
             // 
             // linkLabel1
@@ -262,11 +243,11 @@
             Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(guna2Button2);
-            Controls.Add(guna2Button3);
             Controls.Add(guna2Button4);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Nastroiki";
             Text = "Nastroiki";
+            Load += Nastroiki_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -282,7 +263,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Label label2;
         private Label label4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Label label6;
         private Label label3;
         private Label label7;

@@ -1,4 +1,5 @@
 ﻿using GMap.NET.MapProviders;
+using Karhering.Repository;
 using Karhering.Vopros;
 using Microsoft.VisualBasic.Logging;
 using System;
@@ -17,6 +18,8 @@ namespace Karhering
 {
     public partial class Bonus : Form
     {
+        public Client ClientInfo { get; set; }
+        public int UserId { get; set; }
         private static Random random = new Random(); // Глобальная переменная для генерации случайных чисел
 
         public Bonus()
@@ -64,7 +67,7 @@ namespace Karhering
 
             return new string(randomChars);
         }
-     
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -86,14 +89,27 @@ namespace Karhering
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Hub log = new Hub();
+            Hub hubForm = new Hub();
+            hubForm.UserId = UserId;
             this.Hide();
-            log.Show();
+            hubForm.Show();
         }
 
         private void Bonus_Load(object sender, EventArgs e)
         {
-            
+            ClientInfo = new ClientRepos().GetUser(UserId);
+
+            if (ClientInfo != null)
+            {
+                // Если информация о клиенте успешно получена, устанавливаем ФИО на форме
+                label3.Text = ClientInfo.bonus;
+            }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            rab6 log = new rab6();
+            log.Show();
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Guna.UI2.WinForms;
+using Karhering.Repository;
+using Microsoft.VisualBasic.ApplicationServices;
 using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
@@ -18,18 +20,20 @@ namespace Karhering
 {
     public partial class Nastroiki : Form
     {
+        Baza baza = new Baza();
+        public Client ClientInfo { get; set; }
+        public int UserId { get; set; }
         public Nastroiki()
         {
             InitializeComponent();
-            label6.Text = DataBank.Text2;
-            label6.Text = DataBank.Text3;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Hub log = new Hub();
+            Hub hubForm = new Hub();
+            hubForm.UserId = UserId;
             this.Hide();
-            log.Show();
+            hubForm.Show();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -57,6 +61,28 @@ namespace Karhering
         {
             Delete log = new Delete();
             log.Show();
+        }
+
+        private void Nastroiki_Load(object sender, EventArgs e)
+        {
+            ClientInfo = new ClientRepos().GetUser(UserId);
+
+            if (ClientInfo != null)
+            {
+                // Если информация о клиенте успешно получена, устанавливаем ФИО на форме
+                label3.Text = ClientInfo.telefon;
+                label6.Text = ClientInfo.mail;
+            }
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

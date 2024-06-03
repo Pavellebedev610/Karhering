@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Karhering.Repository;
 using Karhering.Vopros;
 using Microsoft.VisualBasic.Logging;
 using System;
@@ -16,6 +17,8 @@ namespace Karhering
 {
     public partial class Poderjka : Form
     {
+        public Client ClientInfo { get; set; }
+        public int UserId { get; set; }
         public Poderjka()
         {
             InitializeComponent();
@@ -91,9 +94,10 @@ namespace Karhering
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Hub log3 = new Hub();
+            Hub hubForm = new Hub();
+            hubForm.UserId = UserId;
             this.Hide();
-            log3.Show();
+            hubForm.Show();
         }
     }
 }

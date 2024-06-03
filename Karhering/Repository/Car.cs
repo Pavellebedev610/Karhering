@@ -14,6 +14,6 @@ namespace Karhering.Repository
         public double cordinat_x { get; set; }
         public double cordinat_y { get; set; }
         public required byte[] PhotoCar { get; set; }
-
+            
     }
 }

@@ -61,7 +61,8 @@ namespace Karhering
                         DataBank.Text2 = "AdminPanel";
                         MessageBox.Show("Вы вошли в админ-панель");
                         Hub frmlgn = new Hub();
-                        frmlgn.ClientInfo = new Repository.Client { id_polz = table.Rows[0]["id_polz"] };
+                        frmlgn.UserId = (int)table.Rows[0]["id_polz"];
+                        Hub.Instance.pnlUser.Visible = false;
                         this.Hide();
                         frmlgn.ShowDialog();
                         break;
@@ -69,7 +70,8 @@ namespace Karhering
                         DataBank.Text2 = guna2TextBox1.Text;
                         MessageBox.Show("Вы вошли");
                         Hub frmlgn2 = new Hub();
-                        frmlgn2.ClientInfo = new Repository.Client { id_polz = table.Rows[0]["id_polz"] };
+                        frmlgn2.UserId = (int)table.Rows[0]["id_polz"];
+                        Hub.Instance.pnlAdmin.Visible = false;
                         this.Hide();
                         frmlgn2.ShowDialog();
                         break;

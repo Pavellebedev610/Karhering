@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Karhering.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace Karhering
 {
     public partial class Auto : Form
     {
+        public Client ClientInfo { get; set; }
+        public int UserId { get; set; }
         public Auto()
         {
             InitializeComponent();
@@ -58,9 +61,10 @@ namespace Karhering
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Hub log = new Hub();
+            Hub hubForm = new Hub();
+            hubForm.UserId = UserId;
             this.Hide();
-            log.Show();
+            hubForm.Show();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
